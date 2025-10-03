@@ -53,8 +53,19 @@ h2 { /* Estilos para subtítulos */
 .comment-form .btn-delete { /* Botón de borrar comentarios */
   background: darkred; /* Fondo rojo oscuro */
 }
+//---- BLOQUE DE SEGURIDAD ----
+let pass = promt("introduce la contraseña para acceder al blog");
+const passwordCorrecta = "1528";
 
-.comment-form .btn-delete:hover { /* Efecto hover para el botón de borrar */
+if (pass ¡== passwordCorrecta) {
+     document.body.innerHTML = h1AccesoDenegado /h1";
+}else{
+  //solo si la contraseña es correcta carga los comentarios guardados
+  windod.onload = function () {
+    const comentriosGuardados = JSON.parse(localstorage.getitem('comentarios'))
+    comenntariosGuardados.forEach(c = mostrarComentarios(c));
+
+    .comment-form .btn-delete:hover { /* Efecto hover para el botón de borrar */
   background: red; /* Cambia a rojo brillante */
 }
 
